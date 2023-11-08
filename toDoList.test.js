@@ -110,6 +110,23 @@ test('mark as undone', () => {
 
 })
 
+test('mark as undone undefined', ()=>{
+    let list = {
+        "name": "home list",
+        tasks: [{
+            "label": "fermer la porte",
+            "done": false
+        },
+            {
+                "label": "nettoyer la cuisine",
+                "done": false
+            }]
+    }
+    const indexOfTaskToMarkAsUndone = 6;
+    markOneTaskAsUndone(list,indexOfTaskToMarkAsUndone)
+    expect(list.tasks[indexOfTaskToMarkAsUndone]).toBeUndefined()
+})
+
 //test 5 : mark all tasks as done
 
 test('mark all as done', () => {
@@ -124,12 +141,6 @@ test('mark all as done', () => {
                 "done": false
         }]
     }
-    // list.tasks.forEach(task => {
-    //     if (task.done === false){
-    //         task.done = true
-    //     }
-    // })
-    // console.log(list)
 
     markAllAsDone(list)
     expect(list.tasks.every(task => task.done)).toBe(true)
@@ -138,6 +149,8 @@ test('mark all as done', () => {
     // expect(allTaskDone).toBe(true)
 
 })
+
+
 
 //test 6 : mark all tasks as undone
 

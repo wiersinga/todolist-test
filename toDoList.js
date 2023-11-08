@@ -16,7 +16,7 @@ export function markOneTaskAsDone(list, indexOfTaskToMarkAsDone){
 }
 
 export function markOneTaskAsUndone(list,indexOfTaskToMarkAsUndone){
-    if (list.tasks[indexOfTaskToMarkAsUndone] !== null){
+    if (list.tasks[indexOfTaskToMarkAsUndone] !== undefined){
         if (list.tasks[indexOfTaskToMarkAsUndone].done === true){
             list.tasks[indexOfTaskToMarkAsUndone].done = false
         }
