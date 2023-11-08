@@ -33,8 +33,8 @@ test('add new Task', ()=> {
         "name": 'nameList',
         "tasks": [
             {
-                "label": "fermer les fenetres",
-                "done": false
+                label: "fermer les fenetres",
+                done: false
             }
         ]
     }
